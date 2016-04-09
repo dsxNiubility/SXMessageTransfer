@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  SXEnterPage.h
 //  MessageTransferExample
 //
 //  Created by dongshangxian on 16/4/9.
 //  Copyright © 2016年 Sankuai. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SXFatherClassPage.h"
 
-@interface ViewController : UIViewController
-
+@interface SXEnterPage : SXFatherClassPage
 
 @end
-

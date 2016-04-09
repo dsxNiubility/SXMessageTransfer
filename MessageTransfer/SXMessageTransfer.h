@@ -96,7 +96,7 @@ typedef NS_ENUM(NSUInteger, MTBMessageExcuteType) {
 
 @end
 
-@interface MTBMessageObserver : NSObject
+@interface SXMessageObserver : NSObject
 
 @property(nonatomic,copy)NSString *msgName;
 @property(nonatomic,strong)NSNumber *priority;

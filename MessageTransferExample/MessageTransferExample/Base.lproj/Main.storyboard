@@ -1,25 +1,218 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EhY-Lh-LGX">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Enter Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SXEnterPage" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-vt-n5X">
+                                <rect key="frame" x="113" y="163" width="93" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="7d9-gp-zZK"/>
+                                    <constraint firstAttribute="height" constant="74" id="Rrr-cm-cst"/>
+                                </constraints>
+                                <state key="normal" title="点击开始"/>
+                                <connections>
+                                    <segue destination="jMf-CJ-RIm" kind="show" id="UZU-eg-hKH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击开始进入子页面，子页面里有观察者" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK6-gW-9jd">
+                                <rect key="frame" x="57" y="231.5" width="206" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="976-yl-OkM"/>
+                                    <constraint firstAttribute="height" constant="57" id="9gt-c6-wcN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YK6-gW-9jd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5SJ-Yx-zye"/>
+                            <constraint firstItem="ecE-vt-n5X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="VPn-5m-sn2"/>
+                            <constraint firstItem="YK6-gW-9jd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="t90-5u-0wZ"/>
+                            <constraint firstItem="ecE-vt-n5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x0n-Xd-CAE"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7sI-VS-gP8"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="554" y="366"/>
+        </scene>
+        <!--Contracts Page-->
+        <scene sceneID="FS6-QT-TxM">
+            <objects>
+                <viewController id="zB2-Ms-SD2" customClass="SXContractsPage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UpT-Bk-gPF"/>
+                        <viewControllerLayoutGuide type="bottom" id="D1Q-FS-A6R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s1v-Qt-qcc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当你看到这个页面时，观察者已经添加了" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6F-EK-sIu">
+                                <rect key="frame" x="57" y="161.5" width="206" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="bbx-f7-Ykj"/>
+                                    <constraint firstAttribute="height" constant="57" id="hKN-dl-j5s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U6F-EK-sIu" firstAttribute="centerX" secondItem="s1v-Qt-qcc" secondAttribute="centerX" id="Kja-2f-19h"/>
+                            <constraint firstItem="U6F-EK-sIu" firstAttribute="centerY" secondItem="s1v-Qt-qcc" secondAttribute="centerY" constant="-50" id="mXy-p1-THW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="SKC-UV-6c8"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhk-PP-YhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510" y="181"/>
+        </scene>
+        <!--Bookmark Page-->
+        <scene sceneID="Q5E-SB-i75">
+            <objects>
+                <viewController id="X8R-Ez-RYX" customClass="SXBookmarkPage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cJy-Kt-WyN"/>
+                        <viewControllerLayoutGuide type="bottom" id="W1f-MJ-G3B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bjs-2d-ZB0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当你看到这个页面时，观察者已经添加了" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmB-3O-MBL">
+                                <rect key="frame" x="57" y="211" width="206" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="RFG-lM-yr7"/>
+                                    <constraint firstAttribute="height" constant="57" id="VnY-dk-Tuz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLz-Zs-p9U">
+                                <rect key="frame" x="145" y="360" width="142" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="eeO-DB-DnR"/>
+                                    <constraint firstAttribute="height" constant="30" id="khu-aX-nal"/>
+                                </constraints>
+                                <state key="normal" title="点击发送信息"/>
+                                <connections>
+                                    <action selector="SendMsg:" destination="X8R-Ez-RYX" eventType="touchUpInside" id="zVk-KB-bJv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W1f-MJ-G3B" firstAttribute="top" secondItem="QLz-Zs-p9U" secondAttribute="bottom" constant="41" id="D16-O4-NQq"/>
+                            <constraint firstAttribute="trailing" secondItem="QLz-Zs-p9U" secondAttribute="trailing" constant="33" id="nPP-k4-2mk"/>
+                            <constraint firstItem="DmB-3O-MBL" firstAttribute="centerY" secondItem="bjs-2d-ZB0" secondAttribute="centerY" id="oD7-eS-3yH"/>
+                            <constraint firstItem="DmB-3O-MBL" firstAttribute="centerX" secondItem="bjs-2d-ZB0" secondAttribute="centerX" id="rUS-h8-0AK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="TaD-Xa-UV5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNb-1y-gXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1568" y="456"/>
+        </scene>
+        <!--History Page-->
+        <scene sceneID="m74-I9-xNb">
+            <objects>
+                <viewController id="cza-w9-kiX" customClass="SXHistoryPage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5cR-MN-oBe"/>
+                        <viewControllerLayoutGuide type="bottom" id="HaE-XF-Fcx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T4N-HQ-XLh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当你看到这个页面时，观察者已经添加了" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJz-vA-P7y">
+                                <rect key="frame" x="57" y="131.5" width="206" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="PgU-2Y-1BE"/>
+                                    <constraint firstAttribute="height" constant="57" id="XXI-5P-uKU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NJz-vA-P7y" firstAttribute="centerX" secondItem="T4N-HQ-XLh" secondAttribute="centerX" id="KjW-Xi-wNL"/>
+                            <constraint firstItem="NJz-vA-P7y" firstAttribute="centerY" secondItem="T4N-HQ-XLh" secondAttribute="centerY" constant="-80" id="bSy-mE-83G"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="FKu-pm-06g"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HeU-a2-5lz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1464" y="-3"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="r6E-f2-QKj">
+            <objects>
+                <tabBarController id="jMf-CJ-RIm" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="SJV-yy-gpo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cza-w9-kiX" kind="relationship" relationship="viewControllers" id="gDf-xx-LUr"/>
+                        <segue destination="zB2-Ms-SD2" kind="relationship" relationship="viewControllers" id="RgB-Th-ITY"/>
+                        <segue destination="X8R-Ez-RYX" kind="relationship" relationship="viewControllers" id="etu-IP-y3d"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Lw-Nh-Idp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="327"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fGB-0D-R6R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EhY-Lh-LGX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mvj-Op-XuV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f76-2q-MKV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQ7-zK-etp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="378"/>
         </scene>
     </scenes>
 </document>

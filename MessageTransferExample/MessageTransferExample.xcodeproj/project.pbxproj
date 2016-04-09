@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		1DC75BC91CB8FD920002CA4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC75BC81CB8FD920002CA4D /* main.m */; };
 		1DC75BCC1CB8FD920002CA4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC75BCB1CB8FD920002CA4D /* AppDelegate.m */; };
-		1DC75BCF1CB8FD920002CA4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC75BCE1CB8FD920002CA4D /* ViewController.m */; };
+		1DC75BCF1CB8FD920002CA4D /* SXFatherClassPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC75BCE1CB8FD920002CA4D /* SXFatherClassPage.m */; };
 		1DC75BD21CB8FD920002CA4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC75BD01CB8FD920002CA4D /* Main.storyboard */; };
 		1DC75BD41CB8FD920002CA4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC75BD31CB8FD920002CA4D /* Assets.xcassets */; };
 		1DC75BD71CB8FD920002CA4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC75BD51CB8FD920002CA4D /* LaunchScreen.storyboard */; };
 		1DC75BE31CB8FEBE0002CA4D /* SXMessageInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC75BE01CB8FEBE0002CA4D /* SXMessageInteraction.m */; };
 		1DC75BE41CB8FEBE0002CA4D /* SXMessageTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC75BE21CB8FEBE0002CA4D /* SXMessageTransfer.m */; };
+		1DC75BE71CB903C50002CA4D /* SXEnterPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC75BE61CB903C50002CA4D /* SXEnterPage.m */; };
+		1DC75BEA1CB903EC0002CA4D /* SXHistoryPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC75BE91CB903EC0002CA4D /* SXHistoryPage.m */; };
+		1DC75BED1CB904B30002CA4D /* SXContractsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC75BEC1CB904B30002CA4D /* SXContractsPage.m */; };
+		1DC75BF01CB904C10002CA4D /* SXBookmarkPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC75BEF1CB904C10002CA4D /* SXBookmarkPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +26,8 @@
 		1DC75BC81CB8FD920002CA4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1DC75BCA1CB8FD920002CA4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1DC75BCB1CB8FD920002CA4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1DC75BCD1CB8FD920002CA4D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1DC75BCE1CB8FD920002CA4D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1DC75BCD1CB8FD920002CA4D /* SXFatherClassPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXFatherClassPage.h; sourceTree = "<group>"; };
+		1DC75BCE1CB8FD920002CA4D /* SXFatherClassPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXFatherClassPage.m; sourceTree = "<group>"; };
 		1DC75BD11CB8FD920002CA4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DC75BD31CB8FD920002CA4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DC75BD61CB8FD920002CA4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +36,14 @@
 		1DC75BE01CB8FEBE0002CA4D /* SXMessageInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXMessageInteraction.m; sourceTree = "<group>"; };
 		1DC75BE11CB8FEBE0002CA4D /* SXMessageTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXMessageTransfer.h; sourceTree = "<group>"; };
 		1DC75BE21CB8FEBE0002CA4D /* SXMessageTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXMessageTransfer.m; sourceTree = "<group>"; };
+		1DC75BE51CB903C50002CA4D /* SXEnterPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXEnterPage.h; sourceTree = "<group>"; };
+		1DC75BE61CB903C50002CA4D /* SXEnterPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXEnterPage.m; sourceTree = "<group>"; };
+		1DC75BE81CB903EC0002CA4D /* SXHistoryPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHistoryPage.h; sourceTree = "<group>"; };
+		1DC75BE91CB903EC0002CA4D /* SXHistoryPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHistoryPage.m; sourceTree = "<group>"; };
+		1DC75BEB1CB904B30002CA4D /* SXContractsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXContractsPage.h; sourceTree = "<group>"; };
+		1DC75BEC1CB904B30002CA4D /* SXContractsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXContractsPage.m; sourceTree = "<group>"; };
+		1DC75BEE1CB904C10002CA4D /* SXBookmarkPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXBookmarkPage.h; sourceTree = "<group>"; };
+		1DC75BEF1CB904C10002CA4D /* SXBookmarkPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXBookmarkPage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +79,16 @@
 				1DC75BDE1CB8FEBE0002CA4D /* MessageTransfer */,
 				1DC75BCA1CB8FD920002CA4D /* AppDelegate.h */,
 				1DC75BCB1CB8FD920002CA4D /* AppDelegate.m */,
-				1DC75BCD1CB8FD920002CA4D /* ViewController.h */,
-				1DC75BCE1CB8FD920002CA4D /* ViewController.m */,
+				1DC75BCD1CB8FD920002CA4D /* SXFatherClassPage.h */,
+				1DC75BCE1CB8FD920002CA4D /* SXFatherClassPage.m */,
+				1DC75BE51CB903C50002CA4D /* SXEnterPage.h */,
+				1DC75BE61CB903C50002CA4D /* SXEnterPage.m */,
+				1DC75BE81CB903EC0002CA4D /* SXHistoryPage.h */,
+				1DC75BE91CB903EC0002CA4D /* SXHistoryPage.m */,
+				1DC75BEB1CB904B30002CA4D /* SXContractsPage.h */,
+				1DC75BEC1CB904B30002CA4D /* SXContractsPage.m */,
+				1DC75BEE1CB904C10002CA4D /* SXBookmarkPage.h */,
+				1DC75BEF1CB904C10002CA4D /* SXBookmarkPage.m */,
 				1DC75BD01CB8FD920002CA4D /* Main.storyboard */,
 				1DC75BD31CB8FD920002CA4D /* Assets.xcassets */,
 				1DC75BD51CB8FD920002CA4D /* LaunchScreen.storyboard */,
@@ -124,6 +144,7 @@
 		1DC75BBC1CB8FD920002CA4D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SX;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Sankuai;
 				TargetAttributes = {
@@ -168,9 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC75BCF1CB8FD920002CA4D /* ViewController.m in Sources */,
+				1DC75BEA1CB903EC0002CA4D /* SXHistoryPage.m in Sources */,
+				1DC75BE71CB903C50002CA4D /* SXEnterPage.m in Sources */,
+				1DC75BCF1CB8FD920002CA4D /* SXFatherClassPage.m in Sources */,
 				1DC75BCC1CB8FD920002CA4D /* AppDelegate.m in Sources */,
+				1DC75BF01CB904C10002CA4D /* SXBookmarkPage.m in Sources */,
 				1DC75BE31CB8FEBE0002CA4D /* SXMessageInteraction.m in Sources */,
+				1DC75BED1CB904B30002CA4D /* SXContractsPage.m in Sources */,
 				1DC75BC91CB8FD920002CA4D /* main.m in Sources */,
 				1DC75BE41CB8FEBE0002CA4D /* SXMessageTransfer.m in Sources */,
 			);

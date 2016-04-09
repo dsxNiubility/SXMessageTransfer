@@ -63,7 +63,7 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeObserverInObserverStack:) name:@"MTBMsgRemoveObserver" object:nil];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeObserverInObserverStack:) name:@"SXMsgRemoveObserver" object:nil];
         self.msgQueue = [[NSOperationQueue alloc]init];
         [self.msgQueue setMaxConcurrentOperationCount:8];
     }
@@ -178,14 +178,14 @@
 - (void)doSameThingWithMsg:(NSString *)msg interaction:(SXMessageInteraction *)interaction{
     NSMutableArray *observerArray = [([self.msgObserversStack objectForKey:msg]?:[NSArray array])mutableCopy];
     BOOL isRepeat = NO;
-    for (MTBMessageObserver *obs in observerArray) {
+    for (SXMessageObserver *obs in observerArray) {
         if ([@(obs.objectID) isEqual:@(interaction.observerID)]) {
             isRepeat = YES;
         }
     }
     NSString *msgName = [msg stringByAppendingString:[NSString stringWithFormat:@"%ld",interaction.observerID]];
     if (!isRepeat) {
-        MTBMessageObserver *observer = [MTBMessageObserver new];
+        SXMessageObserver *observer = [SXMessageObserver new];
         [observer setMsgName:msgName];
         [observer setPriority:interaction.priority];
         [observer setObjectID:interaction.observerID];
@@ -214,7 +214,7 @@
         observerArray = [observerArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     }
     
-    for (MTBMessageObserver *obs in observerArray) {
+    for (SXMessageObserver *obs in observerArray) {
         NSArray *voidBlocks = [self.blockReceivedVoidStack valueForKey:obs.msgName];
         NSArray *returnBlocks = [self.blockReceivedReturnStack valueForKey:obs.msgName];
         
@@ -280,11 +280,12 @@
     id observer = no.object;
     if (![self.obsIndex containsObject:@([observer hash])]) return;
     
+    NSLog(@"移除观察者--%ld",[observer hash]);
     [self.msgObserversStack enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         NSMutableArray *marray = (NSMutableArray *)obj;
         
         id temobj = nil;
-        for (MTBMessageObserver *obs in marray) {
+        for (SXMessageObserver *obs in marray) {
             if ([@(obs.objectID) isEqual:@([observer hash])]) {
                 temobj = obs;
             }
@@ -298,7 +299,7 @@
 #pragma mark excute block
 - (void)excuteWithVoidBlockDict:(NSDictionary *)dict{
     
-    MTBMessageObserver *obs = dict[@"obs"];
+    SXMessageObserver *obs = dict[@"obs"];
     NSNotification *object = dict[@"object"];
     id block = dict[@"block"];
     
@@ -318,7 +319,7 @@
 
 - (void)excuteWithReturnBlockDict:(NSDictionary *)dict{
     
-    MTBMessageObserver *obs = dict[@"obs"];
+    SXMessageObserver *obs = dict[@"obs"];
     NSNotification *object = dict[@"object"];
     id block = dict[@"block"];
     
@@ -338,6 +339,6 @@
 
 @end
 
-@implementation MTBMessageObserver
+@implementation SXMessageObserver
 
 @end

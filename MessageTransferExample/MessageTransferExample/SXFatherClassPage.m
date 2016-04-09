@@ -6,13 +6,13 @@
 //  Copyright © 2016年 Sankuai. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SXFatherClassPage.h"
 
-@interface ViewController ()
+@interface SXFatherClassPage ()
 
 @end
 
-@implementation ViewController
+@implementation SXFatherClassPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +22,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"SXMsgRemoveObserver" object:self];
 }
 
 @end
