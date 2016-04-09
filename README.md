@@ -1,0 +1,2 @@
+# SXMessageTransfer
+包装了NSNotificationCenter，可实现按优先级执行，同步异步执行
