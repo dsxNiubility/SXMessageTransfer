@@ -1,5 +1,5 @@
 //
-//  MTMMessageTransmitter.h
+//  SXMessageTransfer.h
 //  Pods
 //
 //  Created by dongshangxian on 16/3/25.
@@ -13,9 +13,9 @@
 typedef void(^MsgPosterVoidAction)(id msgObject);
 typedef id (^MsgPosterReturnAction)(id msgObject);
 
-typedef NS_ENUM(NSUInteger, MTBMessageExcuteType) {
-    MTBMessageExcuteTypeSync = 1,
-    MTBMessageExcuteTypeAsync = 2,
+typedef NS_ENUM(NSUInteger, SXMessageExcuteType) {
+    SXMessageExcuteTypeSync = 1,
+    SXMessageExcuteTypeAsync = 2,
 };
 
 @interface SXMessageTransfer : NSObject
@@ -92,7 +92,7 @@ typedef NS_ENUM(NSUInteger, MTBMessageExcuteType) {
  *  @param type   (async or sync default is sync)
  *  @param block  doing on reached
  */
-- (void)sendMsg:(NSString *)msg withObject:(id)object type:(MTBMessageExcuteType)type onReached:(MsgPosterVoidAction)block;
+- (void)sendMsg:(NSString *)msg withObject:(id)object type:(SXMessageExcuteType)type onReached:(MsgPosterVoidAction)block;
 
 @end
 

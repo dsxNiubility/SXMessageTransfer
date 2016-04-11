@@ -1,5 +1,5 @@
 //
-//  MTBMessageInteraction.m
+//  SXMessageInteraction.m
 //  Pods
 //
 //  Created by dongshangxian on 16/3/29.
@@ -19,13 +19,6 @@
 {
     return [self interactionWithObserver:observer priority:@(500)];
 }
-
-//+ (instancetype)interactionWithObserverInstanceName:(NSString *)name{
-//    MTBMessageInteraction *instance = [[MTBMessageInteraction alloc]init];
-//    [instance setObserverInstanceName:name];
-//    [instance setPriority:@(500)];
-//    return instance;
-//}
 
 + (instancetype)interactionWithObserver:(id)observer priority:(NSNumber *)priority{
     SXMessageInteraction *instance = [[SXMessageInteraction alloc]init];

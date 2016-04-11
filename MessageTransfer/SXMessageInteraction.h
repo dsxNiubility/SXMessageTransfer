@@ -1,5 +1,5 @@
 //
-//  MTBMessageInteraction.h
+//  SXMessageInteraction.h
 //  Pods
 //
 //  Created by dongshangxian on 16/3/29.

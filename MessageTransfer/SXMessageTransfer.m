@@ -1,5 +1,5 @@
 //
-//  MTMMessageTransmitter.m
+//  SXMessageTransfer.m
 //  Pods
 //
 //  Created by dongshangxian on 16/3/25.
@@ -206,10 +206,10 @@
 - (void)workingOnReceived:(NSNotification *)object{
     NSString *name = object.name;
     
-    MTBMessageExcuteType excuteType = [[self.msgExcuteType objectForKey:name]integerValue];
+    SXMessageExcuteType excuteType = [[self.msgExcuteType objectForKey:name]integerValue];
     
     NSArray *observerArray = [self.msgObserversStack valueForKey:name];
-    if (excuteType == MTBMessageExcuteTypeSync) {
+    if (excuteType == SXMessageExcuteTypeSync) {
         NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"_priority" ascending:NO];
         observerArray = [observerArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     }
@@ -220,9 +220,9 @@
         
         if(voidBlocks && (voidBlocks.count > 0)){
             for (id voidBlock in voidBlocks) {
-                if (excuteType == MTBMessageExcuteTypeSync){
+                if (excuteType == SXMessageExcuteTypeSync){
                     [self excuteWithVoidBlockDict:@{@"obs":obs,@"object":object,@"block":voidBlock}];
-                }else if (excuteType == MTBMessageExcuteTypeAsync){
+                }else if (excuteType == SXMessageExcuteTypeAsync){
                     NSInvocationOperation *operation = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(excuteWithVoidBlockDict:) object:@{@"obs":obs,@"object":object,@"block":voidBlock}];
                     [self.msgQueue addOperation:operation];
                 }
@@ -231,9 +231,9 @@
         
         if (returnBlocks && (returnBlocks.count >0)){
             for (id returnBlock in returnBlocks) {
-                if (excuteType == MTBMessageExcuteTypeSync){
+                if (excuteType == SXMessageExcuteTypeSync){
                     [self excuteWithReturnBlockDict:@{@"obs":obs,@"object":object,@"block":returnBlock}];
-                }else if (excuteType == MTBMessageExcuteTypeAsync){
+                }else if (excuteType == SXMessageExcuteTypeAsync){
                     NSInvocationOperation *operation = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(excuteWithReturnBlockDict:) object:@{@"obs":obs,@"object":object,@"block":returnBlock}];
                     [self.msgQueue addOperation:operation];
                 }
@@ -260,10 +260,10 @@
 - (void)sendMsg:(NSString *)msg withObject:(id)object onReached:(MsgPosterVoidAction)block
 {
     // default is sync
-    [self sendMsg:msg withObject:object type:MTBMessageExcuteTypeSync onReached:block];
+    [self sendMsg:msg withObject:object type:SXMessageExcuteTypeSync onReached:block];
 }
 
-- (void)sendMsg:(NSString *)msg withObject:(id)object type:(MTBMessageExcuteType)type onReached:(MsgPosterVoidAction)block
+- (void)sendMsg:(NSString *)msg withObject:(id)object type:(SXMessageExcuteType)type onReached:(MsgPosterVoidAction)block
 {
     [self.msgExcuteType setObject:@(type) forKey:msg];
     if (block) {
