@@ -26,6 +26,7 @@
 
 - (void)dealloc
 {
+    // 需要在父类的delloc调用此方法，以省略之后所有的移除操作
     [[NSNotificationCenter defaultCenter]postNotificationName:@"SXMsgRemoveObserver" object:self];
 }
 

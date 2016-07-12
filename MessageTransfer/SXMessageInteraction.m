@@ -25,7 +25,6 @@
     if (observer) {
         [instance setObserverInstanceName:NSStringFromClass([observer class])];
     }
-//    [instance setObserver:observer];
     [instance setPriority:priority];
     [instance setObserverID:[observer hash]];
     return instance;

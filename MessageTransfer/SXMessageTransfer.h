@@ -23,10 +23,6 @@ typedef NS_ENUM(NSUInteger, SXMessageExcuteType) {
 
 + (instancetype)transfer;
 
-#pragma mark -
-#pragma mark 第一版接口 弃用
-- (void)send:(NSDictionary *)dict to:(NSString *)className;
-
 
 #pragma mark -
 #pragma mark 第二版的接口
