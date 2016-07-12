@@ -57,6 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DBBC8BF1D3510B4002FE082 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				1DC75BC71CB8FD920002CA4D /* Supporting Files */,
+				1DC75BE51CB903C50002CA4D /* SXEnterPage.h */,
+				1DC75BE61CB903C50002CA4D /* SXEnterPage.m */,
+				1DC75BCA1CB8FD920002CA4D /* AppDelegate.h */,
+				1DC75BCB1CB8FD920002CA4D /* AppDelegate.m */,
+				1DC75BD01CB8FD920002CA4D /* Main.storyboard */,
+				1DC75BD31CB8FD920002CA4D /* Assets.xcassets */,
+				1DC75BD51CB8FD920002CA4D /* LaunchScreen.storyboard */,
+				1DC75BD81CB8FD920002CA4D /* Info.plist */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
 		1DC75BBB1CB8FD920002CA4D = {
 			isa = PBXGroup;
 			children = (
@@ -77,23 +93,15 @@
 			isa = PBXGroup;
 			children = (
 				1DC75BDE1CB8FEBE0002CA4D /* MessageTransfer */,
-				1DC75BCA1CB8FD920002CA4D /* AppDelegate.h */,
-				1DC75BCB1CB8FD920002CA4D /* AppDelegate.m */,
 				1DC75BCD1CB8FD920002CA4D /* SXFatherClassPage.h */,
 				1DC75BCE1CB8FD920002CA4D /* SXFatherClassPage.m */,
-				1DC75BE51CB903C50002CA4D /* SXEnterPage.h */,
-				1DC75BE61CB903C50002CA4D /* SXEnterPage.m */,
 				1DC75BE81CB903EC0002CA4D /* SXHistoryPage.h */,
 				1DC75BE91CB903EC0002CA4D /* SXHistoryPage.m */,
 				1DC75BEB1CB904B30002CA4D /* SXContractsPage.h */,
 				1DC75BEC1CB904B30002CA4D /* SXContractsPage.m */,
 				1DC75BEE1CB904C10002CA4D /* SXBookmarkPage.h */,
 				1DC75BEF1CB904C10002CA4D /* SXBookmarkPage.m */,
-				1DC75BD01CB8FD920002CA4D /* Main.storyboard */,
-				1DC75BD31CB8FD920002CA4D /* Assets.xcassets */,
-				1DC75BD51CB8FD920002CA4D /* LaunchScreen.storyboard */,
-				1DC75BD81CB8FD920002CA4D /* Info.plist */,
-				1DC75BC71CB8FD920002CA4D /* Supporting Files */,
+				1DBBC8BF1D3510B4002FE082 /* Others */,
 			);
 			path = MessageTransferExample;
 			sourceTree = "<group>";
